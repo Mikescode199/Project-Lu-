@@ -1,0 +1,27 @@
+{% extends 'Admin/index.html' %}
+{% block opciones %}
+AQUI TODAS LAS QUEJAS Y SUGERENCIAS
+{% endblock %}
+
+{% block contenido %}
+
+<table border="1" class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col"> Id de QS </th>
+            <th scope="col">Queja O Sugerencia</th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for qsv in quejas_sugerencias %}
+        <tr>
+            <td scope="row">{{ qsv.id }} </td>
+            <td scope="row">{{ qsv.queja_sugerencia }} </td>
+        </tr> 
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

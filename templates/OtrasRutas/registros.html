@@ -1,0 +1,39 @@
+{% extends 'Admin/index.html' %}
+
+{% block opciones %}
+
+<h1> Recordar </h1>
+<h6> 1 =  Enfermedad </h6>
+<h6> 2 =  Accidente </h6>
+<h6> 3 =  Nacimiento </h6>
+<h6> 4 =  A causa de mi trabajo/otros </h6>
+
+{% endblock %}
+
+{% block contenido %}
+
+<table border="1" class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Ojo izquierdo</th>
+            <th scope="col">Ojo derecho</th>
+            <th scope="col">Edad actual</th>
+            <th scope="col">Comienzo Lentes</th>
+            <th scope="col">Causa</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for registro in registros_listos %}
+        <tr>
+            <td scope="row">{{ registro.graduacion_ojo_izquierdo }} </td>
+            <td scope="row">{{ registro.graduacion_ojo_derecho }} </td>
+            <td scope="row">{{ registro.edad_actual }} </td>
+            <td scope="row">{{ registro.edad_empezo_lentes }} </td>
+            <td scope="row">{{ registro.causa_uso_lentes }} </td>
+            
+        </tr> 
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
