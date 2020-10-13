@@ -33,9 +33,6 @@ def Presentacion(request):
             return redirect('Presentacion')
     else:
         pass
-
-        
-
     #REGISTRO ////////////////////////////////////////////////////
     form = LoginForm(request.POST or None)
     if request.method == 'POST':
