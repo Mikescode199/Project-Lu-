@@ -11,6 +11,6 @@ urlpatterns = [
     path('sala_quejas', views.sala_quejas, name='sala_quejas'),
     path('cerrar_sesion', views.cerrar_sesion, name='cerrar_sesion'),
 
-    path('datos/', Datos, name='datos')
+    path('datos/', Datos.as_view(), name='datos')
 
 ]
