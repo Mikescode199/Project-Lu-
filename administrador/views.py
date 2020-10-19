@@ -40,7 +40,6 @@ def Presentacion(request):
         if form.is_valid():
             user = request.POST['username']
             password = request.POST['password']
-            print(user, password)
             user = authenticate(username= user, password = password)
             if user is not None:
                 if user.is_superuser:
