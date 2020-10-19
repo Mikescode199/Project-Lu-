@@ -9,8 +9,8 @@ CAUSAS = (
     (4, ("A causa de mi trabajo/otros")),
 )
 class DatosUsuario(models.Model):
-    graduacion_ojo_izquierdo = models.CharField(max_length=500)
-    graduacion_ojo_derecho = models.CharField(max_length=500)
+    graduacion_ojo_izquierdo = models.CharField(max_length=10)
+    graduacion_ojo_derecho = models.CharField(max_length=10)
     edad_actual = models.IntegerField()
     edad_empezo_lentes = models.IntegerField()
     causa_uso_lentes = models.IntegerField(choices = CAUSAS, blank= True)
