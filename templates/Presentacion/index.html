@@ -7,6 +7,17 @@
 -->
 <html>
 	<head>
+		<script>
+			window.fbAsyncInit = function() {
+			FB.init({
+				appId            : 'your-app-id',
+				autoLogAppEvents : true,
+				xfbml            : true,
+				version          : 'v8.0'
+			});
+			};
+		</script>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script> 
 		<title>Lu Project</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -14,6 +25,8 @@
 		<noscript><link rel="stylesheet" href="{% static 'Presentacion/assets/css/noscript.css' %}" /></noscript>
 	</head>
 	<body class="is-preload">
+		<div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0&appId=390393298573582&autoLogAppEvents=1" nonce="r7W2br9g"></script>
 
 		<!-- Wrapper -->
 		    {% block content %}
@@ -27,6 +40,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1> <a href="{% url 'datos' %}"> Proyecto Lu </a></h1>
+								<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="box_count" data-action="like" data-size="small" data-share="false"></div>
 								<p> The objective of this project is to estimate the graduation of your eyes.
 									All this is possible, thanks to all the registered information and AI algorithms <a href="#intro"> More</a></p>
 							</div>

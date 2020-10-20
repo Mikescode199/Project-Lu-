@@ -30,7 +30,7 @@ def Presentacion(request):
             instance = form_quejas_sugerencias.save(commit=False)
             instance.user = request.user
             form_quejas_sugerencias.save()
-            return redirect('Presentacion')
+            return redirect('datos')
     else:
         pass
     #REGISTRO ////////////////////////////////////////////////////
