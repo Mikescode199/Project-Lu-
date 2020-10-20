@@ -3,10 +3,10 @@ from django.db import models
 # Create your models here.
 
 CAUSAS = (
-    (1, ("Enfermedad")),
+    (1, ("Disease")),
     (2, ("Accidente")),
-    (3, ("Nacimiento")),
-    (4, ("A causa de mi trabajo/otros")),
+    (3, ("Accident")),
+    (4, ("Because of my work / others")),
 )
 class DatosUsuario(models.Model):
     graduacion_ojo_izquierdo = models.CharField(max_length=10)

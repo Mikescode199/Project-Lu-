@@ -27,16 +27,17 @@
 						<div class="content">
 							<div class="inner">
 								<h1> <a href="{% url 'datos' %}"> Proyecto Lu </a></h1>
-								<p>EL objetivo de este proyecto es estimar la graduación de tus ojos.
-								Todo esto es posible, gracias a toda la información registrada y algoritmos de AI <a href="#intro">Aprender más</a></p>
+								<p> The objective of this project is to estimate the graduation of your eyes.
+									All this is possible, thanks to all the registered information and AI algorithms <a href="#intro"> More</a></p>
 							</div>
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">Cómo funciona?</a></li>
-								<li><a href="#work">sugerencias</a></li>
-								<li><a href="#about">Formulario</a></li>
-								<li><a href="#contact">Iniciar sesión</a></li>
+								<li><a href="#intro">How it works?</a></li>
+								<li><a href="#work">suggestions</a></li>
+								<li><a href="#about">Form</a></li>
+								<li><a href="#contact">SignIn</a></li>
+								<li><a href="https://www.paypal.com/donate?hosted_button_id=S2T52YGAWYEPW">Donate</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -47,23 +48,21 @@
 
 						<!-- Intro -->
 							<article id="intro">
-								<h2 class="major">Cómo funciona?</h2>
-								<p>Gracias a los datos proporcionados por la comunidad, sumado a las poderosas herramientas que nos proporciona Google
-                                podemos realizar y estimar cuál será la graduación de ambos ojos en un tiempo determinado.
+								<h2 class="major">How it works?</h2>
+								<p>
+									Thanks to the data provided by the community, added to the powerful tools that Google provides us
+                                    we can perform and estimate what will be the graduation of both eyes in a given time.
 								</p>
-								<p>Esto no es magia, esto es un tema muy sencillo que enseñan en la escuela, esto es 'Regresión Líneal' sumado a las herramientas
-									de Inteligencia Artificial nos hacen más fácil predecir resultados que nos ayudarán a mejorar nuestra salud
-								</p>
-								<p>Fecha de lanzamiento de datos Octubre/29/2020</p>
+								<a href="https://www.paypal.com/donate?hosted_button_id=S2T52YGAWYEPW">Support Lu development</a>
 							</article>
 
 						<!-- Work -->
 							<article id="work">
-								<h2 class="major">Quejas o Sugerencias</h2>
+								<h2 class="major">Complaints or Suggestions</h2>
 								<form method="post" action="#">
 									{% csrf_token %}
 									{{ form_quejas_sugerencias }}
-									<button type="submit"> Enviar</button>
+									<button type="submit"> Done</button>
 								</form>
 							</article>
 
@@ -73,18 +72,18 @@
 								<form method="post" action="#">
 									{% csrf_token %}
 									{{ form_prueba_ojos }}
-									<button type="submit"> Enviar</button>
+									<button type="submit"> Done</button>
 								</form>
 							</article>
 
 						<!-- Contact -->
 							<article id="contact">
-								<h2 class="major">Sólo administradores</h2>
+								<h2 class="major">Administrators only</h2>
 								<form method="post" action="#">
 									{% csrf_token %}
 									{{ form }}
 									<p></p>
-									<button type="submit"> Entrar</button>
+									<button type="submit"> Done</button>
 									<!-- <div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -358,7 +357,7 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<a href="{% url 'datos' %}">Ver estadísticas</a>
+						<a href="{% url 'datos' %}">See more</a>
 						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
