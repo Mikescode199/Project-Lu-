@@ -13,11 +13,11 @@ class FormularioUser(forms.ModelForm):
                 fields = '__all__'
                 
                 labels = {
-                        'graduacion_ojo_izquierdo' : 'Graduación ojo izquierdo',
-                        'graduacion_ojo_derecho': 'Graduación ojo derecho',
+                        'graduacion_ojo_izquierdo' : 'Left eye graduation',
+                        'graduacion_ojo_derecho': 'Right eye graduation',
                         'edad_actual': 'Edad actual',
-                        'edad_empezo_lentes': 'Edad en la que comenzó a usar lentes',
-                        'causa_uso_lentes' : 'Causa por la cual empezó a usar lentes',
+                        'edad_empezo_lentes': 'Age you started wearing a lens',
+                        'causa_uso_lentes' : 'Cause you started wearing glasses',
                 }
 
                 widgets = {
@@ -36,7 +36,7 @@ class FormularioQueja_suegerencia(forms.ModelForm):
                 fields = '__all__'
 
                 labels = {
-                        'queja_sugerencia' : 'Agregar una queja o sugerencia',
+                        'queja_sugerencia' : 'Add a complaint or suggestion',
 
                 }
 
