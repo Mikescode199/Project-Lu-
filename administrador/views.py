@@ -18,7 +18,7 @@ def Presentacion(request):
             instance = form_prueba_ojos.save(commit=False)
             instance.user = request.user
             form_prueba_ojos.save()
-            return redirect('Presentacion')
+            return redirect('datos')
     else:
         pass
 
@@ -33,9 +33,6 @@ def Presentacion(request):
             return redirect('Presentacion')
     else:
         pass
-
-        
-
     #REGISTRO ////////////////////////////////////////////////////
     form = LoginForm(request.POST or None)
     if request.method == 'POST':
@@ -43,7 +40,6 @@ def Presentacion(request):
         if form.is_valid():
             user = request.POST['username']
             password = request.POST['password']
-            print(user, password)
             user = authenticate(username= user, password = password)
             if user is not None:
                 if user.is_superuser:
