@@ -16,4 +16,4 @@ class Datos(ListView):
                 'Nacimiento' : DatosUsuario.objects.filter(causa_uso_lentes=3).count,
                 'trabajootros' : DatosUsuario.objects.filter(causa_uso_lentes=4).count
         }
-        return render(request, 'Data/data.html' ,data)
+        return render(request, 'Data/data.html' , data)

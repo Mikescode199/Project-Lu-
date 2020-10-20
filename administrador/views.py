@@ -18,7 +18,7 @@ def Presentacion(request):
             instance = form_prueba_ojos.save(commit=False)
             instance.user = request.user
             form_prueba_ojos.save()
-            return redirect('Presentacion')
+            return redirect('datos')
     else:
         pass
 

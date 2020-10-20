@@ -16,6 +16,7 @@
 	<body class="is-preload">
 
 		<!-- Wrapper -->
+		    {% block content %}
 			<div id="wrapper">
 
 				<!-- Header -->
@@ -25,7 +26,7 @@
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Proyecto Lu</h1>
+								<h1> <a href="{% url 'datos' %}"> Proyecto Lu </a></h1>
 								<p>EL objetivo de este proyecto es estimar la graduación de tus ojos.
 								Todo esto es posible, gracias a toda la información registrada y algoritmos de AI <a href="#intro">Aprender más</a></p>
 							</div>
@@ -132,13 +133,13 @@
 									<h4>Preformatted</h4>
 									<pre><code>i = 0;
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+								while (!deck.isInOrder()) {
+									print 'Iteration ' + i;
+									deck.shuffle();
+									i++;
+								}
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								</section>
 
 								<section>
@@ -357,10 +358,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
+						<a href="{% url 'datos' %}">Ver estadísticas</a>
 						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
+			{% endblock content %}
 
 		<!-- BG -->
 			<div id="bg"></div>
