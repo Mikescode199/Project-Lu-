@@ -1,7 +1,7 @@
 from django.urls import path, include
 from . import views
 from .views import *
-from .datos import Datos
+from .datos import *
 
 
 urlpatterns = [
@@ -11,6 +11,7 @@ urlpatterns = [
     path('sala_quejas', views.sala_quejas, name='sala_quejas'),
     path('cerrar_sesion', views.cerrar_sesion, name='cerrar_sesion'),
 
-    path('datos/', Datos.as_view(), name='datos')
+    path('datos/', Datos.as_view(), name='datos'),
+    path('ListData/', ListData.as_view(), name='ListData')
 
 ]
