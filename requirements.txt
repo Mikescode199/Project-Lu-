@@ -4,3 +4,7 @@ Django==3.1.1
 pytz==2020.1
 sqlparse==0.3.1
 djangorestframework==3.12.1
+pandas==1.1.4
+#INSTALAR TENSORFLO 
+tensorflow 
+matplotlib
